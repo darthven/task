@@ -16,18 +16,20 @@ const app = new Koa()
 const controllers = [TransactionController, AccountController]
 const middlewares = [LoggingMiddleware]
 
-app.use(
-	bodyParser({
-		jsonLimit: '10mb',
-		urlencoded: true,
-		multipart: true
-	})
-).use(cors())
+app
+  .use(
+    bodyParser({
+      jsonLimit: '10mb',
+      urlencoded: true,
+      multipart: true
+    })
+  )
+  .use(cors())
 
 export default useKoaServer(app, {
-	routePrefix: `/api/${API_VERSION}`,
-	controllers,
-	middlewares,
-	defaultErrorHandler: false,
-	classTransformer: false
+  routePrefix: `/api/${API_VERSION}`,
+  controllers,
+  middlewares,
+  defaultErrorHandler: false,
+  classTransformer: false
 })

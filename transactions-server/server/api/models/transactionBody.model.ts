@@ -1,4 +1,4 @@
 export interface TransactionBody {
-    type: string
-    amount: number
+  type: string
+  amount: number
 }

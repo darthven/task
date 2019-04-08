@@ -7,10 +7,10 @@ import server from './api/server'
 import storage from './storage'
 
 server.listen(
-	PORT,
-	async (): Promise<void> => {
-		await storage()
-		logger.debug(`HTTP Server listening on port: ${PORT}`)
-		logger.debug(`Environment: ${NODE_ENV}`)
-	}
+  PORT,
+  async (): Promise<void> => {
+    await storage()
+    logger.debug(`HTTP Server listening on port: ${PORT}`)
+    logger.debug(`Environment: ${NODE_ENV}`)
+  }
 )

@@ -1,3 +1,3 @@
 export interface Balance {
-    total: number
+  total: number
 }
