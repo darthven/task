@@ -9,12 +9,7 @@
 						<v-container>
 							<v-layout>
 								<v-flex>
-									<v-text-field
-										name="amount"
-										label="Amount"
-										type="text"
-										v-model="amount"
-									></v-text-field>
+									<v-text-field name="amount" label="Amount" type="text" v-model="amount"></v-text-field>
 								</v-flex>
 								<v-flex>
 									<v-select v-model="type" :items="transactionTypes" label="Type"></v-select>
